@@ -1,0 +1,630 @@
+@import "../../node_modules/amazeui/less/variables";
+@import "../../node_modules/amazeui/less/mixins";
+
+// Your style here.
+// 字体图标
+@font-face {
+  font-family: "iconfont";
+  src: url('../fonts/iconfont.eot'); /* IE9*/
+  src: url('../fonts/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/iconfont.woff') format('woff'), /* chrome, firefox */
+  url('../fonts/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../fonts/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+[class*="yf-icon-"] {
+  display: inline-block;
+  font-style: normal;
+}
+[class*="yf-icon-"]:before {
+  display: inline-block;
+  font: normal normal normal 1.6rem/1 "iconfont", sans-serif;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+[class*="yf-icon-"].am-fl {
+  margin-right: .3em;
+}
+[class*="yf-icon-"].am-fr {
+  margin-left: .3em;
+}
+//icon size
+.yf-icon-sm:before {
+  font-size: 150%;
+  vertical-align: -10%;
+}
+.yf-icon-md:before {
+  font-size: 200%;
+  vertical-align: -16%;
+}
+.yf-icon-lg:before {
+  font-size: 250%;
+  vertical-align: -22%;
+}
+.yf-icon-xl:before {
+  font-size: 500%;
+  vertical-align: -28%;
+}
+
+//icon mapping
+.yf-icon-shouzhimingxi:before { content: "\e637"; }
+.yf-icon-yishixiao:before { content: "\e638"; }
+.yf-icon-a:before { content: "\e600"; }
+.yf-icon-bf:before { content: "\e601"; }
+.yf-icon-bq:before { content: "\e602"; }
+.yf-icon-cjg:before { content: "\e603"; }
+.yf-icon-cjkd:before { content: "\e604"; }
+.yf-icon-dh:before { content: "\e605"; }
+.yf-icon-home:before { content: "\e606"; }
+.yf-icon-img:before { content: "\e607"; }
+.yf-icon-jg:before { content: "\e608"; }
+.yf-icon-left:before { content: "\e609"; }
+.yf-icon-ls:before { content: "\e60a"; }
+.yf-icon-more:before { content: "\e60b"; }
+.yf-icon-my:before { content: "\e60c"; }
+.yf-icon-nz:before { content: "\e60d"; }
+.yf-icon-q:before { content: "\e60e"; }
+.yf-icon-qgz:before { content: "\e60f"; }
+.yf-icon-qq:before { content: "\e610"; }
+.yf-icon-right:before { content: "\e611"; }
+.yf-icon-sf:before { content: "\e612"; }
+.yf-icon-tag:before { content: "\e613"; }
+.yf-icon-th:before { content: "\e614"; }
+.yf-icon-txb:before { content: "\e615"; }
+.yf-icon-x:before { content: "\e616"; }
+.yf-icon-yts:before { content: "\e617"; }
+.yf-icon-yxj:before { content: "\e618"; }
+.yf-icon-zb:before { content: "\e619"; }
+.yf-icon-zq:before { content: "\e61a"; }
+.yf-icon-zt:before { content: "\e61b"; }
+.yf-icon-ss:before { content: "\e61c"; }
+.yf-icon-xx:before { content: "\e61d"; }
+.yf-icon-yqhy:before { content: "\e61e"; }
+.yf-icon-ysc:before { content: "\e61f"; }
+.yf-icon-wsc:before { content: "\e620"; }
+.yf-icon-sz:before { content: "\e621"; }
+.yf-icon-sx:before { content: "\e622"; }
+.yf-icon-mm:before { content: "\e623"; }
+.yf-icon-yhm:before { content: "\e624"; }
+.yf-icon-rl:before { content: "\e625"; }
+.yf-icon-jsyh:before { content: "\e626"; }
+.yf-icon-zgyh:before { content: "\e627"; }
+.yf-icon-zsyh:before { content: "\e628"; }
+.yf-icon-nyyh:before { content: "\e629"; }
+.yf-icon-gsyh:before { content: "\e62a"; }
+.yf-icon-czjl:before { content: "\e62b"; }
+.yf-icon-yhk:before { content: "\e62c"; }
+.yf-icon-hk:before { content: "\e62d"; }
+.yf-icon-wx:before { content: "\e62e"; }
+.yf-icon-sc:before { content: "\e62f"; }
+.yf-icon-zf:before { content: "\e630"; }
+.yf-icon-hf:before { content: "\e631"; }
+.yf-icon-gb:before { content: "\e632"; }
+.yf-icon-c:before { content: "\e633"; }
+.yf-icon-d:before { content: "\e634"; }
+.yf-icon-yhq:before { content: "\e635"; }
+.yf-icon-ky:before { content: "\e636"; }
+.yf-icon-jq:before { content: "\e639"; }
+.yf-icon-week:before { content: "\e63a"; }
+.yf-icon-single:before { content: "\e63b"; }
+.yf-icon-month:before { content: "\e63c"; }
+.yf-icon-gd:before { content: "\e641"; }
+.yf-icon-wqzb:before { content: "\e642"; }
+.yf-icon-lw:before { content: "\e640"; }
+//去除默认样式
+img{
+  max-width: 100%!important;
+}
+html, body{ height: 100%; }
+ul,li{
+  list-style:none;
+}
+a{
+  color:#676566;
+}
+.am-divider{
+  margin:0.8rem auto;
+}
+.yf-clear-both{
+  clear:both;
+}
+h1{
+  margin:0
+}
+// 样式
+// footer
+.am-navbar-nav a{
+  line-height: 26px;
+}
+
+.yf-bg-red{
+  background-color: #e43a3d!important;
+  border-color : #e43a3d!important;
+}
+
+.yf-bg-red-active{
+  background-color: #ba002f!important;
+  border-color : #ba002f!important;
+}
+
+.yf-bg-gray{
+  background-color: #e2e3e7!important;
+  border-color : #e2e3e7!important;
+}
+.yf-bg-green{
+  background-color: #2ea682!important;
+  border-color : #2ea682!important;
+}
+.yf-bg-white{
+  background-color: #fff!important;
+  border-color : #fff!important;
+}
+.yf-bg-blue{
+  background-color:#154a9a!important;
+  border-color:#154a9a!important;
+}
+.yf-bg-zs-red{
+  background-color:#e91514!important;
+  border-color:#e91514!important;
+}
+.yf-bg-zfb-blue{
+  background-color:#15b0f0!important;
+  border-color:#15b0f0!important;
+}
+.yf-text-red{
+  color: #e43a3d!important;
+}
+.yf-bg-fff7d2{
+   background-color:#fff7d2!important;
+  border-color:#fff7d2!important;
+}
+.yf-text-gray{
+  color: #9a9a9a!important;
+}
+.yf-text-ee922f{
+  color: #ee922f!important;
+}
+
+.yf-bg-yellow{
+  background-color:#f9c349!important;
+}
+.yf-text-white{
+  color: #fff!important;
+}
+.yf-text-blue{
+  color:#349bea!important;
+}
+.yf-text-vote-gray{
+  color:#6a6466;
+}
+.yf-time-gray{
+  color:#969696;
+}
+.yf-font-size{
+  font-size:1rem;
+}
+.yf-text-align{
+  text-align:left;
+}
+//表单
+.am-form .yf-static{ margin: 0; padding: 0.5em; line-height: 1.2; border: 1px solid #fff; }
+
+//panel
+.yf-panel-padding-0 .am-panel-bd{ padding: 0!important; }
+.yf-panel-padding-0 .am-panel-hd{ padding:0!important; }
+.yf-panel-border-0 {border: none;}
+.yf-panel-border-0 .am-panel-bd {border: none;}
+.yf-panel-border-0 .am-panel-hd {border: none;}
+
+//tabs
+.yf-tabs>li>a { padding-left: 0!important; padding-right: 0!important; border-bottom:2px solid #c6c4c5!important;height:49px;line-height:3.5rem;}
+
+//直播室
+.yf-room-tabs {
+  font-size: 1.2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1020;
+}
+
+.yf-zt-icon {
+  position: absolute;
+  left: 10px;
+  margin-top: -7px;
+}
+.yf-bw-border-right{
+  border-right:1px solid #ddd;
+ 
+}
+.yf-bw-border-bottom{
+  border-bottom:1px solid #ddd;
+}
+.yf-icon-button{
+  line-height: 22px;
+  font-size: 22px;
+  padding: 2px 8px;
+}
+//vip
+.yf-vip-tabs{
+  font-size: 1.4rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1020;
+}
+
+.yf-vip-bg-gray{
+  background-color:#999;
+}
+.yf-vip-bg-yellow{
+    background-color:#d7a741;
+}
+// 直播室表情
+.yf-slider.am-slider-slide {
+  background-color: #d8d9dd;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.yf-emotion > li {
+  padding: 0;
+  margin: 0;
+}
+.yf-emotion > li > img {
+  border: 0;
+  margin-bottom: 0;
+  padding: 5px;
+  width:90%!important;
+  background-color: #d8d9dd;
+}
+//圆圈背景
+.yf-text-bg-yq{
+  width:20px;
+  height:20px;
+  border-radius:50%;
+}
+//字体加粗
+.yf-font-bold{
+    font-weight:bold; 
+}
+//字体缩进
+.yf-text-indent{
+  text-indent: 2em;
+}
+
+//底边颜色
+.yf-border-bottom{
+ 
+  border-bottom:2px solid #e43a3d;
+}
+.yf-border-bottom>a{
+  color: #e43a3d!important;
+  }
+  //背景颜色
+  .yf-bg-lightbrown{
+    background-color: #f9c349!important;
+  }
+  .yf-room-bg-ddd{
+    background-color: #e2e3e7!important;
+  }
+  //room
+  .yf-room-tabs{
+  font-size: 1.2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1020;
+  }
+.yf-room-vote-bg-pink{
+  background-color:#ff5b76;
+}
+.yf-room-vote-pink{
+  background-color:#ffdde1;
+}
+.yf-room-gift-bg-lightred{
+  background-color:#eb6e52;
+}
+.yf-room-gift-border-lightyellow{
+ border:5px solid #fceccb;
+ border-bottom:none;
+}
+.yf-roon-username-yellow{
+  color:#fcfc0e;
+}
+//切换tab字体颜色样式
+.yf-tabs>.am-active>a{
+  color:#ff0000!important;
+  border-bottom:2px solid #ff0000!important;
+}
+ .am-nav>li>a:hover{
+   color:#ff0000!important;
+  border-bottom:2px solid #ff0000!important;
+  background-color:none
+}
+//纸条问答按钮背景
+.am-active .am-btn-default.am-dropdown-toggle, .am-btn-default.am-active, .am-btn-default:active{
+  background-color:#379bfd!important;
+  color:#fff;
+}
+.am-topbar{
+  background-color:#d8d9dd;
+}
+
+//送礼
+.yf-margin-right{
+  margin-right:-0.25rem;
+}
+.yf-sl-position{
+  position:fixed;
+  top:50px;
+
+  bottom:0;
+  height:100%;
+  background-color:#ccc;
+}
+.yf-gift-bg-gray{
+  background-color:#ccc!important;
+}
+.yf-gift-chanse{
+  background-color:#e43a3d!important;
+  color:#fff;
+}
+.yf-gift-nochanse{
+   background-color:none;
+   color:#656565;
+}
+//vip
+.am-nav-tabs.am-nav-justify.yf-vip-tabs>li>a{
+  border:none;
+}
+//收支明细
+.am-datepicker{
+  margin-top:0rem;
+}
+//代金券
+.yf-djq-postion-3{
+  position:absolute;
+  top:1.5rem;
+  left:1.5rem;
+}
+.yf-icon-postion{
+  position:absolute;
+  top:-0.2rem;
+  left:0.5rem;
+  font-size:2.5rem;
+}
+.yf-djq-padding .am-panel-bd{
+  padding:0.75rem!important;
+}
+.yf-djq-padding-left{
+  padding-left:6rem;
+}
+.yf-djq-text-gray{
+  color:#b2b0b1;
+}
+.yf-icon-yishixiao-postion{
+  position:absolute;
+  top:0;
+  right:0; 
+}
+// am-width-topbar-fixed-top{
+//   position:fixed;
+//  top:49px;
+//  left:0;
+// }
+// am-topbar-fixed-bottom{
+//   position:fixed;
+//  bottom:0;
+//  left:0;
+// }
+.yf-zzc{
+  width:100%;
+  height:100%;
+  background-color:#000;
+  opacity:0.8;
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:1020;
+}
+.yf-zzc-image{
+ width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:1030;
+  overflow:hidden;
+}
+.yf-tishi{
+  width:355px;
+  height:220px;
+  background-image:url(../i/tishi.png)
+}
+.yf-display-none{
+  display:none;
+  
+}
+//文字居中
+.yf-text-center{
+  text-align:center;
+}
+.am-article>:last-child{
+  padding:0.6rem 1.4rem
+}
+.am-text-size{
+  color:#616161;
+}
+//导航栏点击背景色
+.am-nav-tabs>li.am-active>a, .am-nav-tabs>li.am-active>a:focus, .am-nav-tabs>li.am-active>a:hover{
+  background-color:transparent ;
+  border:none;
+}
+.am-nav>li.am-active>a, .am-nav>li.am-active>a:focus, .am-nav>li.am-active>a:hover{
+  background-color:transparent;
+}
+.am-nav.am-nav-tabs.am-nav-justify.yf-tabs.yf-room-tabs>li>a{
+  border:none
+}
+.am-nav-tabs.am-nav-justify>li>a{
+  border:none;
+}
+.yf-cjg-tittle{
+  width:100%;
+  height:3rem;
+  text-align:center;
+}
+.yf-clear-both{
+  clear:both;
+}
+.yf-overflow-hidden{
+  overflow:hidden
+}
+.yf-cjg-bg-yq{
+   width:25px;
+   height:25px;
+   border-radius:50%; 
+}
+.yf-font-weight-normal{
+  font-weight:normal;
+}
+.yf-width{
+  width:100%;
+  font-family:"微软雅黑"
+}
+.yf-margin-left-cjg{
+  margin-left:2.5rem;
+}
+.am-divider-cjg{
+  margin:0.4rem auto;
+}
+.yf-icon-bg-single{
+  color:#ff9a36;
+}
+.yf-icon-bg-week{
+  color:#b867c6;
+}
+.yf-icon-bg-month{
+  color:#dd4542
+}
+.yf-icon-bg-jq{
+  color:#688dff;
+}
+.yf-text-xxl{
+  font-size:3.4rem;
+}
+.yf-tl-cjg{
+  width:70%;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  overflow:hidden;
+}
+.yf-cjg-width{
+    width:72%;
+}
+
+.yf-room-xiala-ul{
+  width:100%;
+  position:relative;
+}
+.yf-room-xiala-li{
+  width:5rem;
+  height:5rem;
+  line-height:1.5rem;
+  text-align:center;
+}
+.yf-display-block{
+  display:block;
+}
+.yf-room-line-height{
+  line-height:1.5rem;
+}
+.am-popover-sm .am-popover-inner{
+  height:100%;
+  padding:0;
+}
+.yf-login-box .am-modal-bd {
+  padding: 0;
+}
+.yf-wqzb-circle{
+  width:1.2rem;
+  height:1.2rem;
+  border-radius:100%;
+  margin-top:0.6rem;
+  margin-right:1rem;
+}
+.yf-wqzb-margin-left{
+  margin-left:2.2rem
+}
+.bg{
+  background-color:#ff0000!important;
+}
+.yf-img-bg{
+  width:4rem;
+  height:4rem;
+  border-radius:20%;
+  background-color:#ccc;
+  margin:auto;
+  margin-top:1rem;
+}
+.yf-icon-css{
+  line-height:4rem;
+  font-size:2.4rem;
+}
+.yf-icon-margin-top{
+  margin-top:-2rem;
+}
+//付费观点
+.am-panel-default>.yf-panal-bgcolor{
+  background-color:#fc9b32;
+  color:#fff;
+}
+.yf-panel-view{
+  border:none;
+  box-shadow:none;
+}
+.yf-panel-hd-view{
+  border-color:none;
+}
+.yf-panel-bd-view{
+  width:100%;
+  overflow:hidden;
+  background-image: url(../i/view_bg.jpg);
+  background-size: cover;
+}
+.yf-panel-bd-view-stop{
+  width:100%;
+  height:6.0rem;
+  background-image: url(../i/sale_stop.jpg);
+  background-size: cover;
+}
+.yf-panel-bd-view-sale{
+  padding:0;
+  width:100%;
+  height:6.0rem;
+  background-image:url(../i/sale-view.jpg);
+  background-size: cover;
+}
+.yf-view-padding-left{
+  padding-left:6rem;
+}
+.yf-view-line-height{
+  line-height:5rem;
+}
+.yf-font-size-view{
+  font-size:1.6rem;
+}
+.yf-payview-box .am-modal-dialog{
+ width: 300px;
+}
+.yf-padding-viewmonth{
+ padding:0.5rem; 
+}
